@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title></title>
+
+		<style type="text/css">
+			body {
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				position: fixed;
+				/*background-color: #D3D3D3;*/
+			}
+			
+			#head {
+				top: 0;
+				background-color: #1E90FF;
+				height: 50px;
+				width: 100vw;
+				text-align: center;
+				line-height: 50px;
+			}
+			
+			#head_left {
+				float: left;
+				width: 50px;
+				height: 50px;
+				background-image: url(../../img/yiquanxuanzhong.png);
+				background-position: 50% 50%;
+				background-size: 25px 25px;
+				background-repeat: no-repeat;
+			}
+			
+			#head_right {
+				float: right;
+				width: 50px;
+				height: 50px;
+			}
+			
+			#inputBottom {
+				height: 46px;
+				width: 100vw;
+			}
+			/*#bottom{
+			   position: fixed;
+			   bottom: 0;
+			}*/
+			
+			#bottom_send {
+				height: 50px;
+				line-height: 50px;
+				width: 50px;
+				display: inline-block;
+				background-color: #1E90FF;
+				text-align: center;
+			}
+			
+			#bottom_input {
+				vertical-align: top;
+				height: 42px;
+				font-size: 25px;
+			}
+			
+			#content {
+				overflow-y: scroll;
+			}
+			
+			#content_chat_items {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			
+			.content_chat_item {
+				width: 100vw;
+				margin-top: 25px;
+			}
+			
+			.content_chat_item_name {
+				display: inline-block;
+				vertical-align: top;
+			}
+			
+			.content_chat_item_jiao {
+				display: inline-block;
+				vertical-align: top;
+				background-image: url(../../img/add.png);
+				width: 20px;
+				height: 15px;
+				background-size: 100% 100%;
+				position: relative;
+				left: 5px;
+			}
+			
+			.content_chat_item_content {
+				display: inline-block;
+				vertical-align: top;
+				max-width: 70%;
+				border: 1px #1E90FF solid;
+				padding: 5px;
+				letter-spacing: 8px
+			}
+			
+			.content_chat_item_jiao_right {
+				float: right;
+				vertical-align: top;
+				background-image: url(../../img/add.png);
+				width: 20px;
+				height: 15px;
+				background-size: 100% 100%;
+				position: relative;
+				left: -5px;
+				top: 2px;
+				margin-right: 10px;
+			}
+			
+			.content_chat_item_content_right {
+				float: right;
+				max-width: 70%;
+				border: 1px #1E90FF solid;
+				padding: 5px;
+				letter-spacing: 2.5px
+			}
+			
+			.content_chat_item_name_right {
+				float: right;
+			}
+		</style>
+		<script type="text/javascript" src="../../js/ALLDefault.js"></script>
+	</head>
+
+	<body>
+		<div id="head">
+			<div id="head_left" mysign="button" onclick="back()"></div>
+			<span id="friendNick">朋友昵称</span>
+			<div id="head_right"></div>
+		</div>
+		<div id="content">
+			<div id="content_chat_items">
+				<!--<div class="content_chat_item">
+					<div class="content_chat_item_name">对方：</div>
+					<div class="content_chat_item_jiao"></div>
+					<div class="content_chat_item_content">习近平是就新华社一篇《形式主义、官僚主义新表现值得警惕》的文章作出指示的。他指出，文章反映的情况，看似新表现，实则老问题，再次表明“四风”问题具有顽固性反复性。纠正“四风”不能止步，作风建设永远在路上。各地区各部门都要摆摆表现，找找差距，抓住主要矛盾，特别要针对表态多调门高、行动少落实差等突出问题，拿出过硬措施，扎扎实实地改。各级领导干部要带头转变作风，身体力行，以上率下，形成“头雁效应”。在即将开展的“不忘初心、牢记使命”主题教育中，要力戒形式主义，以好的作风确保好的效果。</div>
+				</div>
+
+				<div class="content_chat_item">
+					<div class="content_chat_item_name_right">:我</div>
+					<div class="content_chat_item_jiao_right"></div>
+					<div class="content_chat_item_content_right">习近平是就新华社一篇《</div>
+					<div style="clear: both;"></div>
+				</div>-->
+
+			</div>
+
+		</div>
+		<div id="bottom">
+			<input id="bottom_input"/>
+			<div id="bottom_send" mysign="button" onclick="sendMessage()">发送</div>
+		</div>
+		<script type="application/javascript">
+			window.onresize = function() {
+				resize1();
+			}
+            
+            !function(){
+            	    var sendButton = document.getElementById("bottom_send");
+            	    sendButton.onmousedown = function(event){
+            	    	    event.preventDefault();
+            	    }
+            }();
+
+
+			function resize1() {
+
+				var contentELe = document.getElementById("content");
+				contentELe.style.height = window.innerHeight - 100 + "px";
+
+				var bottom_input = document.getElementById("bottom_input");
+				bottom_input.style.width = window.innerWidth - 90 + 'px';
+				bottom_input.style.height = 50 - (bottom_input.offsetHeight - 42) + "px";
+
+				var bottom_sendEle = document.getElementById("bottom_send");
+				bottom_sendEle.style.width = window.innerWidth - bottom_input.offsetWidth - 6 + "px"
+
+			}
+
+			resize1();
+
+		</script>
+
+		<script type="text/javascript" src="sendMessage.js"></script>
+	</body>
+
+</html>

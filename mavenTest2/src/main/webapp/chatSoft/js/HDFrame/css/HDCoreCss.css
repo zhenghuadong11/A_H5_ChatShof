@@ -1,0 +1,46 @@
+			/*
+			 * 以下是可以是整个页面都禁止选择的。就是选中文字，复制之类的。但是针对一个元素
+			 * * {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+		     以下是和上面相同，但是是针对真个页面的
+			* 	document.documentElement.style.webkitUserSelect='none';
+			* */
+			
+			body {
+				width: 100vw;
+				height: 100vh;
+				margin: 0;
+				overflow: hidden;
+				position: fixed;
+			}
+				
+			#head {
+				top: 0;
+				background-color: #1E90FF;
+				height: 50px;
+				width: 100vw;
+				text-align: center;
+				line-height: 50px;
+			}
+			
+			#head_left {
+				float: left;
+				width: 50px;
+				height: 50px;
+				background-image: url(../../img/yiquanxuanzhong.png);
+				background-position: 50% 50%;
+				background-size: 25px 25px;
+				background-repeat: no-repeat;
+			}
+			
+			#head_right {
+				float: right;
+				width: 50px;
+				height: 50px;
+			}

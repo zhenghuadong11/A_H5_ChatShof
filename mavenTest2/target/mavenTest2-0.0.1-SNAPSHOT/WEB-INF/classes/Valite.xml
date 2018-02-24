@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        <!-- #一般来说一个映射文件和一个实体类匹配 -->
+
+<hibernate-mapping>
+    <class name="Valite" table="valite">
+        <id name="id" column="id">
+        
+        </id>
+      
+        <property name="name"  column="name" />
+
+    </class>
+</hibernate-mapping>

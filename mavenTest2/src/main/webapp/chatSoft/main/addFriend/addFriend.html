@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title></title>
+	
+		<style type="text/css">
+			body {
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				position: fixed;
+				/*background-color: #D3D3D3;*/
+			}
+			
+			#head {
+				background-color: #1E90FF;
+				height: 50px;
+				width: 100vw;
+				text-align: center;
+				line-height: 50px;
+			}
+			
+			#head_left {
+				float: left;
+				width: 50px;
+				height: 50px;
+				background-image: url(../../img/yiquanxuanzhong.png);
+				background-position: 50% 50%;
+				background-size: 25px 25px;
+				background-repeat: no-repeat;
+			}
+			
+			#head_right {
+				float: right;
+				width: 50px;
+				height: 50px;
+			}
+			
+			#search {
+				border: 1px #DCDCDC solid;
+				/*height: 35px;*/
+				width: 50%;
+				/*display: inline-block;*/
+				/*vertical-align: top;*/
+				float: right;
+			}
+			
+			#search_icon {
+				background-image: url(../../img/yiquanxuanzhong.png);
+				background-position: 50% 50%;
+				background-size: 30px 30px;
+				height: 50px;
+				width: 50px;
+				background-repeat: no-repeat;
+				display: inline-block;
+				vertical-align: top;
+			}
+			
+			#search_input {
+				margin-top: 10px;
+				height: 30px;
+				border: none;
+				display: inline-block;
+				/*vertical-align: top;*/
+			}
+			
+			#search_sure {
+				height: 52px;
+				width: 50px;
+				float: right;
+				background-color: #FF9807;
+				line-height: 52px;
+				text-align: center;
+			}
+			
+			#friend_items {
+				width: 100vw;
+			}
+			
+			.friend_item {
+				height: 50px;
+				margin-top: 5px;
+				border-bottom: 1px #DCDCDC solid;
+				background-color: #ff9807;
+			}
+			
+			.friend_item_add {
+				width: 50px;
+				height: 30px;
+				background-color: #1E90FF;
+				margin-top: 10px;
+				text-align: center;
+				line-height: 30px;
+				float: right;
+			}
+			
+			.friend_item_name {
+				float: left;
+				height: 50px;
+				line-height: 50px;
+			}
+		</style>
+		<script type="text/javascript" src="../../js/ALLDefault.js"></script>
+	</head>
+
+	<body>
+		<div id="head">
+			<div id="head_left" mysign="button" onclick="back()"></div>
+			添加朋友
+			<div id="head_right"></div>
+		</div>
+		<div>
+			<div id="search_sure" mysign="button" onclick="searchClick()">查询</div>
+			<div id="search">
+				<div id="search_icon"></div>
+
+				<input id="search_input" />
+			</div>
+
+		</div>
+		<div style="clear: both;"></div>
+
+		<div id="friend_items">
+			<!--<div class="friend_item">
+				<div class="friend_item_name">
+					nihaoa
+				</div>
+				<button class="friend_item_add" mysign="button">添加</button>
+
+			</div>-->
+
+		</div>
+
+		<script type="application/javascript">
+			window.onresize = function() {
+				resize();
+			}
+
+			function resize() {
+
+				var search_inputEle = document.getElementById("search_input");
+				search_inputEle.style.width = document.getElementById("search").offsetWidth - 60 + "px";
+			}
+			resize();
+		</script>
+		<script type="text/javascript" src="addFriend.js"></script>
+	</body>
+
+</html>

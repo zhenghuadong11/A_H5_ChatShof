@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.action.excludePattern" value="/.*/.socket"></constant>
+
+	<package name="action" namespace="/" extends="struts-default">
+
+		<action name="rigister" method="rigister" class="com.yyzzt.implement.Rigister" />
+
+		<action name="addFriend" method="addFriend" class="com.yyzzt.implement.AddFriend" />
+
+		<action name="comfirmFriend" method="comfirmFriend"
+			class="com.yyzzt.implement.ComfirmFriend" />
+
+		<action name="friendlist" method="a"
+			class="com.yyzzt.implement.Friendlist" />
+
+		<action name="login" method="login" class="com.yyzzt.implement.Login" />
+
+		<action name="refuse" method="refuse" class="com.yyzzt.implement.Refuse" />
+
+		<action name="selectFriend" method="selectFriend"
+			class="com.yyzzt.implement.SelectFriend" />
+
+		<action name="sendMessage" method="sendMessage"
+			class="com.yyzzt.implement.SendMessage" />
+
+		<action name="sendMessage" method="sendMessage"
+			class="com.yyzzt.implement.SendMessage" />
+
+		<action name="applyFriendList" method="applyFriendList"
+			class="com.yyzzt.implement.ApplyFriendList" />
+	</package>
+</struts>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title></title>
+		
+		<style type="text/css">
+			body {
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				position: fixed;
+				/*background-color: #D3D3D3;*/
+			}
+			
+			#head {
+				background-color: #1E90FF;
+				height: 50px;
+				width: 100vw;
+				text-align: center;
+				line-height: 50px;
+			}
+			#head_left{
+				float: left;
+				                width: 50px;
+                height: 50px;
+                background-image: url(../../img/yiquanxuanzhong.png);
+                background-position: 50% 50%;
+                background-size: 25px 25px;
+                background-repeat: no-repeat;
+			}
+			#head_right{
+				float: right;
+                width: 50px;
+                height: 50px;
+           
+                				
+			}
+			
+			#content_list {
+				width: 100vw;
+			}
+			
+			.content_item {
+				height: 50px;
+				line-height: 50px;
+			}
+			
+			.content_item_sure {
+				float: right;
+				width: 50px;
+				height: 30px;
+				line-height: 30px;
+				background-color: red;
+				margin-top: 10px;
+				text-align: center;
+			}
+			
+			.content_item_refuse {
+				margin-left: 10px;
+				float: right;
+				width: 50px;
+				height: 30px;
+				line-height: 30px;
+				background-color: red;
+				margin-top: 10px;
+				text-align: center;
+			}
+			
+			.content_item_nickName {
+				float: left;
+			}
+		</style>
+		<script type="text/javascript" src="../../js/ALLDefault.js"></script>
+	</head>
+
+	<body>
+		<div id="head">
+			<div id="head_left" mysign="button" onclick="back()"></div>
+			好友申请
+			<div id="head_right"></div>
+		</div>
+		<div id="content_list">
+
+			<!--<div class="content_item">
+				<div class="content_item_nickName">nihao</div>
+				<div class="content_item_refuse" mysign="button">拒绝</div>
+				<div class="content_item_sure" mysign="button">同意</div>
+			</div>
+			<div class="content_item">
+				<div class="content_item_nickName">nihao</div>
+				<div class="content_item_refuse" mysign="button">拒绝</div>
+				<div class="content_item_sure" mysign="button">同意</div>
+			</div>-->
+		</div>
+         <script type="text/javascript" src="applyFriendList.js" ></script>
+	</body>
+
+</html>

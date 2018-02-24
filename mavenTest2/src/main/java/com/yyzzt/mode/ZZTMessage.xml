@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping package="com.yyzzt.mode">
+    <class name="ZZTMessage" table="c_message">
+        <id name="id" type="int" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="type" type="int" column="type" />
+        
+        <property name="content" type="text" column="content" />
+        <property name="fromUser" type="string" column="fromUser" />
+        <property name="toUser" type="string" column="toUser" />
+        <property name="date" type="date" column="date" />
+        <property name="isLook" type="int" column="isLook" />
+       <!--     private int id;
+    /*
+     * type = 0的时候表示没有看过
+     * type = 1的时候表示看过了
+     * */
+    private int type;
+    private String content;
+    private String fromUser;
+    private String toUser;
+    private Date date;
+    private int isLook; -->
+    </class>
+</hibernate-mapping>

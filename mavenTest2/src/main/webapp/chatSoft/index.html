@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title></title>
+
+		<script type="text/javascript" src="js/ALLDefault.js"></script>
+		<style>
+
+			
+			body {
+				width: 100vw;
+				height: 100vh;
+				margin: 0;
+				overflow: hidden;
+				position: fixed;
+			}
+			
+			#backgournd {
+				background-color: #6B7184;
+				opacity: 0.5;
+				width: 100vw;
+				height: 100vh;
+			}
+			
+			#content {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				width: 450px;
+				max-width: 80%;
+			}
+			
+			.div_item {
+				width: 100%;
+				height: 50px;
+				margin-bottom: 20px;
+				background-color: #6b7184;
+			}
+			
+			.icon_div {
+				width: 50px;
+				height: 100%;
+				background-image: url(img/yiquanxuanzhong.png);
+				background-size: 25px 25px;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				display: inline-block;
+				vertical-align: top;
+			}
+			
+			.item_Vline {
+				width: 1px;
+				margin-top: 5px;
+				height: 40px;
+				display: inline-block;
+				vertical-align: top;
+				background-color: white;
+			}
+			
+			.input_item {
+				color: white;
+				height: 40px;
+				padding-left: 10px;
+				margin-top: 5px;
+				background-color: transparent;
+				border: none;
+			}
+			
+			#login {
+				height: 50px;
+				background-color: #ff3266;
+				color: white;
+				text-align: center;
+				line-height: 50px;
+			}
+			
+			#head {
+				font-size: 25px;
+				text-align: center;
+				color: white;
+				margin-bottom: 15px;
+			}
+			
+			::-webkit-input-placeholder {
+				color: gainsboro;
+			}
+			
+			#register {
+				text-align: center;
+				bottom: 0;
+				position: absolute;
+				width: 100vw;
+				color: #393b4d;
+			}
+		</style>
+	</head>
+
+	<body oncontextmenu="return false;" onselectstart="return false">
+		<div id="backgournd">
+
+		</div>
+		<div id="register" mysign="button" onclick="register()">注册</div>
+		<div id="content">
+			<div id="head">登陆</div>
+			<div class="div_item">
+				<div class="icon_div"></div>
+				<div class="item_Vline"></div>
+				<input class="input_item" placeholder="账号" />
+			</div>
+			<div class="div_item">
+				<div class="icon_div"></div>
+				<div class="item_Vline"></div>
+				<input class="input_item" placeholder="密码" />
+			</div>
+			<div id="login" mysign="button" onclick="loginClick()">LOGIN</div>
+		</div>
+
+		<script type="application/javascript">
+			window.onresize = function() {
+				resize();
+			}
+			resize();
+
+			function resize() {
+				var item_icons = document.getElementsByClassName("input_item");
+
+				var div_item = document.getElementsByClassName("div_item")[0];
+
+				for(var i = 0; i < item_icons.length; i += 1) {
+
+					item_icons[i].style.width = div_item.offsetWidth - 88 + "px";
+				}
+			}
+		</script>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+
+</html>
